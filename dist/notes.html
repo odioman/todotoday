@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="notes.js" defer></script>   
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>TodoToday</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">TodoToday</h2>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        
+        <nav>
+            <ul>
+                <li class="all-tasks"><a href="index.html">To Do List</a></li>
+                <li class="sticky-notes"><a href="notes.html">Notes</a></li>
+            </ul>
+        </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+    </header>
+  <!--Notes-->
+    <div id="app">
+        <button class="add-note" type="button">+</button>
+    </div> 
+</body>
+</html>

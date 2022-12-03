@@ -1,0 +1,152 @@
+:root {
+  --background: #00cc00;
+  --text: #fff;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-lable span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-lable span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+nav li:hover {
+  color: var(--text);
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: var(--text);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav li {
+  opacity: 1;
+}
+
+/* Notes */
+
+body {
+  margin: 0;
+  background: var(--background);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 24px;
+}
+
+.note {
+  height: 200px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-family: sans-serif;
+  margin-top: 100px;
+}
+
+.add-note {
+  height: 200px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 100px;
+}
+
+add-note:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,217 @@
+:root {
+  --background: #00cc00;
+  --text: #fff;
+}
+
+* {
+  margin: 0;
+}
+
+/* header and nav */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-lable span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-lable span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+nav li:hover {
+  color: var(--text);
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: var(--text);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav li {
+  opacity: 1;
+}
+
+/* header and nav end */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #00cc00;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .app {
+    width: 90%;
+  }
+}
+
+.app h1 {
+  color: white;
+  font-size: 40px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app form {
+  display: flex;
+  width: 100%;
+  background-color: black;
+}
+
+.app form input {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  width: 90%;
+}
+
+.app form button {
+  border: none;
+  color: white;
+  background-color: var(--background);
+  font-size: 25px;
+  font-weight: 600;
+  height: 42px;
+  width: 10%;
+  border: 1px solid black;
+}
+
+.app form button:hover {
+  transform: scale(1.2);
+}
+
+.todoList {
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.todoList li {
+  padding: 10px;
+  background-color: black;
+  width: 97%;
+}
+
+.check {
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  -webkit-appearance: none;
+}
+
+.check:checked {
+  background-color: gray;
+}
+
+.task {
+  font-size: 18px;
+  padding: 0 10px;
+  width: 80%;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.app ul li button {
+  float: right;
+  cursor: pointer;
+}
+
+.app ul li button:hover {
+  background-color: crimson;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}

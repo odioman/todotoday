@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesI.css">
+    <title>To Do List</title>
+</head>
+<header>
+    <h1 class="logo">TodoToday</h2>
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+    
+    <nav>
+        <ul class="nav">
+            <li class="to-do-list"><a href="index.html">To Do List</a></li>
+            <li class="sticky-notes"><a href="notes.html">Notes</a></li>
+        </ul>
+    </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+</header>
+<body>
+    <div class="container">
+        <div class="app">
+            <h1>To Do List</h1>
+            <form>
+                <input type="text" placeholder="What are you going to do?...">
+                <button type="submit">+</button>
+            </form>
+            <ul class="todoList"></ul>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
